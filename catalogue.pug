@@ -1,0 +1,183 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title='Каталог'
+        meta(name="description", content='Unistoria')
+    body(class='tw-flex tw-min-h-screen')
+        div(class='tw-column-start tw-flex-1 tw-w-full')
+            include src/modules/menu-mobule
+            include src/components/card
+
+            div(class='tw-hidden lg:tw-flex tw-items-center tw-justify-between tw-w-full tw-px-6 xl:tw-px-12 tw-py-8 xl:tw-py-12')
+                a(
+                    href='/'
+                    class='tw-column-center tw-w-fit tw-gap-1'
+                )
+                    h2(class='tw-text-[32px] tw-font-normal tw-text-text-default tw-uppercase tw-tracking-widest') unostoria
+                    span(class='tw-text-sm tw-font-light tw-text-text-default') Saint-Petersburg
+
+                div(class='tw-flex tw-items-center tw-w-auto tw-gap-6')
+                    a(
+                        href='/favorite'
+                        class='tw-row-centered tw-w-6 tw-h-6'
+                    )
+                        svg(
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class='tw-w-[20px] tw-h-[20px]'
+                        )
+                            path(
+                                d='M15.8907 5.86266C15.7543 5.42859 15.4819 5.04993 15.1136 4.78268C14.7454 4.51543 14.301 4.37377 13.846 4.37866H10.9333L10.0487 1.62132C9.90955 1.1873 9.63619 0.808666 9.26799 0.540033C8.89979 0.271401 8.45578 0.126648 8.00001 0.126648C7.54423 0.126648 7.10023 0.271401 6.73203 0.540033C6.36383 0.808666 6.09046 1.1873 5.95134 1.62132L5.06667 4.37866H2.15401C1.7005 4.3793 1.2588 4.52325 0.891993 4.78993C0.525185 5.05661 0.252034 5.43238 0.111554 5.86358C-0.0289254 6.29478 -0.0295472 6.75934 0.109778 7.19092C0.249102 7.62249 0.521247 7.999 0.88734 8.26666L3.25801 9.99999L2.35667 12.7913C2.21101 13.2242 2.20917 13.6927 2.35141 14.1267C2.49366 14.5608 2.77237 14.9372 3.14601 15.2C3.51324 15.4712 3.95827 15.6165 4.41478 15.6142C4.87128 15.6119 5.31484 15.4622 5.67934 15.1873L8.00001 13.4793L10.3213 15.1853C10.6879 15.455 11.1305 15.6014 11.5856 15.6036C12.0406 15.6058 12.4847 15.4637 12.8539 15.1977C13.223 14.9316 13.4983 14.5554 13.6402 14.123C13.7821 13.6906 13.7832 13.2244 13.6433 12.7913L12.742 9.99999L15.1153 8.26666C15.4856 8.00235 15.761 7.62585 15.9006 7.19289C16.0402 6.75992 16.0368 6.29349 15.8907 5.86266ZM14.3287 7.18999L11.566 9.20932C11.4525 9.2921 11.3681 9.40861 11.3248 9.54221C11.2814 9.67582 11.2814 9.8197 11.3247 9.95332L12.3747 13.2C12.4278 13.3647 12.4274 13.5419 12.3734 13.7063C12.3194 13.8707 12.2147 14.0138 12.0743 14.1149C11.9339 14.216 11.765 14.27 11.592 14.2692C11.419 14.2683 11.2507 14.2126 11.1113 14.11L8.39467 12.11C8.28025 12.0259 8.14198 11.9806 8.00001 11.9806C7.85803 11.9806 7.71976 12.0259 7.60534 12.11L4.88867 14.11C4.74939 14.2139 4.58063 14.2708 4.40685 14.2724C4.23307 14.274 4.0633 14.2202 3.92216 14.1188C3.78102 14.0174 3.67584 13.8736 3.62187 13.7084C3.5679 13.5433 3.56795 13.3652 3.62201 13.2L4.67534 9.95332C4.71862 9.8197 4.71859 9.67582 4.67525 9.54221C4.63191 9.40861 4.54748 9.2921 4.43401 9.20932L1.67134 7.18999C1.53221 7.08812 1.42883 6.94489 1.37597 6.78075C1.32311 6.61662 1.32347 6.43997 1.377 6.27606C1.43053 6.11214 1.53449 5.96933 1.67403 5.86802C1.81358 5.76672 1.98157 5.71211 2.15401 5.71199H5.55401C5.69515 5.71199 5.83265 5.66718 5.94671 5.58404C6.06076 5.5009 6.14548 5.3837 6.18867 5.24932L7.22201 2.02866C7.27505 1.86385 7.37902 1.72012 7.51894 1.61816C7.65887 1.51619 7.82754 1.46126 8.00067 1.46126C8.17381 1.46126 8.34248 1.51619 8.4824 1.61816C8.62233 1.72012 8.7263 1.86385 8.77934 2.02866L9.81267 5.24932C9.85586 5.3837 9.94059 5.5009 10.0546 5.58404C10.1687 5.66718 10.3062 5.71199 10.4473 5.71199H13.8473C14.0198 5.71211 14.1878 5.76672 14.3273 5.86802C14.4669 5.96933 14.5708 6.11214 14.6244 6.27606C14.6779 6.43997 14.6782 6.61662 14.6254 6.78075C14.5725 6.94489 14.4691 7.08812 14.33 7.18999H14.3287Z'
+                                fill='#1E1E1E'
+                            )
+
+                    a(
+                        href='/cart'
+                        class='tw-row-centered tw-w-6 tw-h-6'
+                    )
+                        svg(
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class='tw-w-[20px] tw-h-[20px]'
+                        )
+                            path(
+                                d='M15.5346 2.718C15.3471 2.49296 15.1123 2.31197 14.8469 2.18788C14.5816 2.06379 14.2922 1.99964 13.9992 2H3.22058L3.19258 1.766C3.13528 1.27961 2.9015 0.831155 2.53557 0.505652C2.16964 0.180149 1.697 0.000227862 1.20724 0H1.05924C0.882434 0 0.712865 0.0702379 0.58784 0.195262C0.462816 0.320286 0.392578 0.489856 0.392578 0.666667C0.392578 0.843478 0.462816 1.01305 0.58784 1.13807C0.712865 1.2631 0.882434 1.33333 1.05924 1.33333H1.20724C1.37053 1.33335 1.52814 1.3933 1.65016 1.50181C1.77218 1.61032 1.85014 1.75983 1.86924 1.922L2.78658 9.722C2.88181 10.5332 3.27156 11.2812 3.88185 11.824C4.49214 12.3668 5.28048 12.6667 6.09725 12.6667H13.0592C13.2361 12.6667 13.4056 12.5964 13.5307 12.4714C13.6557 12.3464 13.7259 12.1768 13.7259 12C13.7259 11.8232 13.6557 11.6536 13.5307 11.5286C13.4056 11.4036 13.2361 11.3333 13.0592 11.3333H6.09725C5.68462 11.3322 5.28244 11.2034 4.94587 10.9647C4.60929 10.726 4.35479 10.389 4.21724 10H12.1639C12.9454 10 13.7021 9.72549 14.3018 9.22429C14.9015 8.7231 15.3059 8.02713 15.4446 7.258L15.9679 4.35533C16.0202 4.06734 16.0084 3.77138 15.9335 3.48843C15.8586 3.20547 15.7224 2.94245 15.5346 2.718ZM14.6592 4.11867L14.1352 7.02133C14.052 7.48333 13.8089 7.90133 13.4485 8.20213C13.0881 8.50294 12.6334 8.66738 12.1639 8.66667H4.00524L3.37791 3.33333H13.9992C14.0972 3.33275 14.194 3.35375 14.2829 3.39484C14.3718 3.43593 14.4506 3.4961 14.5136 3.57107C14.5766 3.64605 14.6223 3.73398 14.6475 3.82862C14.6727 3.92327 14.6767 4.0223 14.6592 4.11867Z'
+                                fill='#1E1E1E'
+                            )
+                            path(
+                                d='M5.05924 16C5.79562 16 6.39258 15.403 6.39258 14.6667C6.39258 13.9303 5.79562 13.3333 5.05924 13.3333C4.32286 13.3333 3.72591 13.9303 3.72591 14.6667C3.72591 15.403 4.32286 16 5.05924 16Z'
+                                fill='#1E1E1E'
+                            )
+                            path(
+                                d='M11.7259 16C12.4623 16 13.0592 15.403 13.0592 14.6667C13.0592 13.9303 12.4623 13.3333 11.7259 13.3333C10.9895 13.3333 10.3926 13.9303 10.3926 14.6667C10.3926 15.403 10.9895 16 11.7259 16Z'
+                                fill='#1E1E1E'
+                            )
+
+            div(class='tw-column-start un-container tw-w-full tw-max-w-[1920px] tw-mx-auto tw-gap-12 tw-pt-[112px] lg:tw-pt-12')
+                h2(class='tw-text-[28px] tw-font-light tw-text-text/default') New Collections
+
+                -
+                  var catalogue = [
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      },
+                      {
+                          name: 'Костюм voishe из мерсеризованного хлопка',
+                          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                          price: '5 600p',
+                          preview: '/assets/img/catalogue-default.webp'
+                      }
+                  ]
+
+                div(class='tw-grid tw-grid-cols-1 min-[560px]:tw-grid-cols-2 md:tw-grid-cols-3 min-[1280px]:tw-grid-cols-4 min-[1660px]:tw-grid-cols-5 min-[1920px]:tw-grid-cols-6 tw-w-full tw-gap-y-12 tw-gap-x-8 lg:tw-px-4')
+                  each item in catalogue
+                      +card(item.name, item.desc, item.price, item.preview)
+
+            include src/sections/footer

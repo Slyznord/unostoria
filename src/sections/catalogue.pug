@@ -55,7 +55,7 @@ include ../components/card
 div(class='tw-column-center un-container')
     div(class='tw-column-center tw-w-full tw-max-w-[1920px] tw-gap-8')
         div(class='tw-flex tw-flex-col lg:tw-flex-row tw-items-start lg:tw-items-center tw-justify-between tw-w-full')
-            h2(class='tw-text-2xl lg:tw-text-[32px] tw-font-light tw-text-text/default tw-uppercase') New collections
+            h2(class='tw-text-2xl lg:tw-text-[28px] tw-font-light tw-text-text/default') New Collections
 
             a(
                 class='tw-flex tw-items-center tw-gap-2'
@@ -75,6 +75,6 @@ div(class='tw-column-center un-container')
                         fill="#47575C"
                     )
 
-        div(class='tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 min-[1440px]:tw-grid-cols-4 min-[1660px]:tw-grid-cols-5 tw-w-full tw-gap-y-12 tw-gap-x-8 lg:tw-px-4')
+        div(class='tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 min-[1440px]:tw-grid-cols-4 min-[1660px]:tw-grid-cols-5 tw-w-full tw-max-w-[1920px] tw-gap-y-12 tw-gap-x-8 lg:tw-px-4')
             each item in catalogue
               +card(item.name, item.desc, item.price, item.preview)
