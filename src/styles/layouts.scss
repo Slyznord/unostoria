@@ -1,0 +1,21 @@
+@layer components {
+  .tw-column {
+    &-start {
+      @apply tw-flex tw-flex-col tw-items-start;
+    }
+
+    &-center {
+      @apply tw-flex tw-flex-col tw-items-center;
+    }
+  }
+
+  .tw-row {
+    &-centered {
+      @apply tw-flex tw-items-center tw-justify-center;
+    }
+  }
+
+  .un-container {
+    @apply tw-px-4 lg:tw-px-12 tw-py-6 lg:tw-py-12;
+  }
+}

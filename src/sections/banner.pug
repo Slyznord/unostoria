@@ -1,0 +1,34 @@
+div(class='tw-grid tw-grid-cols-2 tw-w-full tw-h-screen tw-max-h-[1024px] tw-overflow-hidden tw-relative')
+    img(
+        src='/assets/img/banner.webp'
+        class='tw-absolute tw-top-0 tw-left-0 lg:tw-relative tw-block tw-w-full tw-h-full tw-object-cover'
+    )
+
+    div
+        include ../modules/menu
+        include ../modules/menu-mobule
+
+    div(class='tw-flex tw-justify-center tw-w-full tw-h-[300px] min-[1920px]:tw-h-[480px] tw-absolute tw-top-0 tw-bottom-0 tw-left-0 tw-m-auto')
+        div(class='tw-flex tw-items-center tw-justify-center tw-w-full tw-max-w-[300px] min-[1920px]:tw-max-w-[480px] tw-h-full tw-bg-gray/base')
+            div(class='tw-column-center tw-w-auto tw-gap-1')
+                h2(class='tw-text-[32px] tw-font-normal tw-text-text-default tw-uppercase tw-tracking-widest') unostoria
+                span(class='tw-text-sm tw-font-light tw-text-text-default') Saint-Petersburg
+
+        div(class='tw-hidden md:tw-flex tw-w-full tw-h-full tw-max-w-[300px] min-[1920px]:tw-max-w-[480px] tw-relative')
+            img(
+                src='/assets/img/banner-2.webp'
+                class='tw-w-full tw-h-full tw-object-cover'
+            )
+
+            div(class='tw-hidden xl:tw-flex tw-column-start tw-w-[280px] [@media(min-width:1920px)]:tw-w-[320px] tw-gap-3 tw-absolute tw-top-[105%] min-[1920px]:tw-top-[75%] tw-left-[calc(100%+10%)]')
+                span(class='tw-text-sm [@media(min-width:1920px)]:tw-text-base tw-font-light tw-text-text/default')
+                    | <b>UNOSTORIA</b> - это история о балансе и самовыражении.
+                    | Наши коллекции сочетают экстравагантность и простоту,
+                    | расслабленность и элегантность.
+                    | Мы выбираем качественные материалы и продуманные силуэты,
+                    | чтобы подчеркнуть вашу индивидуальность.
+                span(class='tw-text-sm [@media(min-width:1920px)]:tw-text-base tw-font-light tw-text-text/default')
+                    | Для тех, кто уверен в себе,
+                    | ценят свободу выбора и умеет находить гармонию в каждом аспекте жизни.
+                    | Ваш стиль - это ваша история, и мы
+                    | поможем рассказать её.
