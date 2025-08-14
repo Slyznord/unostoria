@@ -1,0 +1,28 @@
+<div class="tw-column-start tw-w-auto tw-gap-5">
+  <img
+    src="{{ preview }}"
+    class="tw-w-full tw-h-[420px] min-[1440px]:tw-h-[480px] tw-object-cover tw-object-top tw-rounded-[20px]"
+    alt=""
+  >
+
+  <div class="tw-column-start tw-w-full tw-gap-4">
+    <div class="tw-column-start tw-w-full tw-gap-1">
+      <span class="tw-text-lg tw-font-light tw-text-text/default tw-truncate tw-w-full">
+        {{ name }}
+      </span>
+
+      <span class="tw-text-base tw-font-thin tw-text-text/default">
+        {{ desc }}
+      </span>
+    </div>
+
+    <div class="tw-flex tw-items-center tw-justify-between tw-w-full">
+      <span class="tw-text-lg tw-font-light tw-text-text/default">
+        {{ price }}
+      </span>
+
+      <!-- ./src/components/button.html -->
+      {{#> button text="В корзину" }}{{/button}}
+    </div>
+  </div>
+</div>

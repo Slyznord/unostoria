@@ -2,9 +2,9 @@
 export default {
   prefix: 'tw-',
   content: [
-    './*.{html,pug}',
-    './src/**/*.{html,pug}',
-    './styles/**/*.{scss}'
+    './*.html',
+    './src/**/*.html',
+    './styles/**/*.scss'
   ],
   theme: {
     extend: {

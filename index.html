@@ -4,8 +4,23 @@
     <meta charset="UTF-8" />
     <title>Unistoria</title>
   </head>
+
   <body>
-    <pug file="index.pug"></pug>
+    <!-- ./src/sections/banner.html -->
+    {{> banner }}
+
+    <!-- ./src/sections/about.html -->
+    {{> about }}
+
+    <!-- ./src/sections/catalogue.html -->
+    {{> catalogue }}
+
+    <!-- ./src/sections/subscribe.html -->
+    {{> subscribe }}
+
+    <!-- ./src/sections/footer.html -->
+    {{> footer }}
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

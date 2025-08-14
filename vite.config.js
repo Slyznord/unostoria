@@ -1,6 +1,6 @@
-import pugPlugin from 'vite-plugin-pug'
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import handlebars from 'vite-plugin-handlebars'
 
 export default defineConfig({
   build: {
@@ -10,7 +10,21 @@ export default defineConfig({
       }
     }
   },
-  plugins: [pugPlugin({
-    localImports: true
-  })]
+  plugins: [
+    handlebars({
+      context: {
+        products: Array.from({ length: 10 }, () => ({
+          name: 'костюм voishe из мерсеризованного хлопка',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ',
+          price: '5 600р',
+          preview: '/assets/img/catalogue-default.webp'
+        }))
+      },
+      partialDirectory: [
+        resolve(__dirname, 'src/components'),
+        resolve(__dirname, 'src/modules'),
+        resolve(__dirname, 'src/sections')
+      ]
+    })
+  ]
 })
