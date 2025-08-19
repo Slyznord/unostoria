@@ -2,4 +2,15 @@
   @apply tw-w-full tw-h-10 tw-px-3 tw-py-2;
   @apply tw-rounded-[5px];
   @apply tw-bg-gray-20;
+  @apply tw-transition-all tw-duration-300;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @apply tw-shadow-default;
+  }
+
+  &::placeholder {
+    @apply tw-text-sm fullscreen:tw-text-base tw-font-normal tw-text-text-tertiary;
+  }
 }

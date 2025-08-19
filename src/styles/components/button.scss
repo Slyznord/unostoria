@@ -1,0 +1,51 @@
+@layer components {
+  .ui-button {
+    @apply tw-flex tw-items-center tw-justify-center;
+    @apply tw-rounded-[5px] tw-cursor-pointer;
+    @apply tw-transition-all tw-duration-300;
+
+    svg path {
+      @apply tw-transition-all tw-duration-300;
+    }
+
+    &_md {
+      @apply tw-w-auto tw-px-3 tw-py-[5px] tw-gap-[10px];
+    }
+
+    &_square {
+      @apply tw-w-10 tw-h-10;
+    }
+
+    &_primary {
+      @apply tw-bg-primary-80 tw-text-white;
+      @apply hover:tw-bg-primary-100 active:tw-bg-primary-80 active:tw-shadow-default;
+    }
+
+    &_outlined {
+      @apply tw-border tw-border-primary-80 tw-text-primary-80;
+
+      svg path {
+        &[stroke] { @apply tw-stroke-primary-80; }
+        &[fill] { @apply tw-fill-primary-80; }
+      }
+
+      &:hover {
+        @apply tw-bg-primary-100 tw-border-primary-100;
+
+        svg path {
+          &[stroke] { @apply tw-stroke-white; }
+          &[fill] { @apply tw-fill-white; }
+        }
+      }
+
+      &:active {
+        @apply tw-bg-transparent tw-border-primary-80 tw-shadow-default;
+
+        svg path {
+          &[stroke] { @apply tw-stroke-primary-80; }
+          &[fill] { @apply tw-fill-primary-80; }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <title>Unistoria | Detail</title>
   </head>
@@ -10,22 +11,131 @@
       {{> menu-global }}
       {{> menu-mobile }}
 
-      <div class="tw-flex tw-items-start tw-justify-center tw-w-full tw-gap-12 tw-pb-12">
-        <div class="tw-column-start tw-w-[320px] tw-gap-3">
-          <div class="tw-bg-primary-100 tw-w-full tw-h-[440px]"></div>
+      <div class="un-container tw-column-start tw-w-full tw-gap-12 tw-pt-[108px] lg:tw-pt-0">
+        <div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-center tw-w-full tw-gap-12">
+          <div class="tw-column-start tw-w-full lg:tw-w-[520px] fullscreen:tw-w-[720px] tw-max-w-[460px] lg:tw-max-w-[unset] tw-gap-3">
+            <div class="tw-bg-gray-60 tw-w-full tw-aspect-[3/4]"></div>
 
-          <div class="tw-flex tw-justify-evenly tw-w-full tw-gap-3">
-            <div class="tw-flex tw-h-[70px] tw-w-[-webkit-fill-available] tw-bg-primary-100"></div>
-            <div class="tw-flex tw-h-[70px] tw-w-[-webkit-fill-available] tw-bg-primary-100"></div>
-            <div class="tw-flex tw-h-[70px] tw-w-[-webkit-fill-available] tw-bg-primary-100"></div>
-            <div class="tw-flex tw-h-[70px] tw-w-[-webkit-fill-available] tw-bg-primary-100"></div>
+            <div class="tw-flex tw-justify-evenly tw-w-full tw-gap-3">
+              <div class="tw-flex tw-aspect-[1/1] tw-w-[-webkit-fill-available] tw-bg-gray-60"></div>
+              <div class="tw-flex tw-aspect-[1/1] tw-w-[-webkit-fill-available] tw-bg-gray-60"></div>
+              <div class="tw-flex tw-aspect-[1/1] tw-w-[-webkit-fill-available] tw-bg-gray-60"></div>
+              <div class="tw-flex tw-aspect-[1/1] tw-w-[-webkit-fill-available] tw-bg-gray-60"></div>
+            </div>
+          </div>
+
+          <div class="tw-column-start tw-w-full tw-max-w-[720px] fullscreen:tw-max-w-[840px] tw-gap-7">
+            <h1 class="tw-text-2xl fullscreen:tw-text-[32px] tw-font-medium tw-text-text-primary">
+              Брюки STRAIGHT из костюмной ткани (коричневый)
+            </h1>
+
+            <div class="tw-column-start tw-w-full tw-gap-3">
+              <h3 class="tw-text-xl tw-font-normal tw-text-text-primary">
+                Описание
+              </h3>
+
+              <p class="tw-text-base tw-font-light tw-text-text-secondary">
+                Брюки выполнены в прямом, свободном крое, что обеспечивает комфорт и свободу движений.
+                Средняя посадка на бедрах делает их универсальным выбором для повседневного гардероба.
+                На передней части брюк, на уровне бедер расположены функциональные боковые карманы.
+                <br><br>
+                Параметры модели: 174/85/60/90 <br>
+                На модели размер: S
+              </p>
+            </div>
+
+            <div class="tw-column-start tw-w-full tw-gap-3">
+              <h3 class="tw-text-xl tw-font-normal tw-text-text-primary">
+                Характеристики
+              </h3>
+
+              <div class="tw-column-start tw-w-full tw-gap-2">
+                <div class="tw-flex tw-items-center tw-gap-1">
+                <span class="tw-text-base tw-font-normal tw-text-text-primary">
+                  Артикул:
+                </span>
+
+                  <span class="tw-text-base tw-font-light tw-text-text-secondary">
+                  20225002
+                </span>
+                </div>
+
+                <div class="tw-flex tw-items-center tw-gap-1">
+                <span class="tw-text-base tw-font-normal tw-text-text-primary">
+                  Материал:
+                </span>
+
+                  <span class="tw-text-base tw-font-light tw-text-text-secondary">
+                  66% Полиэстер, 32% Вискоза, 2% Эластан
+                </span>
+                </div>
+
+                <div class="tw-flex tw-items-center tw-gap-1">
+                <span class="tw-text-base tw-font-normal tw-text-text-primary">
+                  Цвет:
+                </span>
+
+                  <span class="tw-text-base tw-font-light tw-text-text-secondary">
+                  Коричневый
+                </span>
+                </div>
+
+                <div class="tw-flex tw-items-center tw-gap-1">
+                <span class="tw-text-base tw-font-normal tw-text-text-primary">
+                  Размеры:
+                </span>
+
+                  <span class="tw-text-base tw-font-light tw-text-text-secondary">
+                  S / M / L
+                </span>
+                </div>
+
+                <div class="tw-flex tw-items-center tw-gap-1">
+                <span class="tw-text-base tw-font-normal tw-text-text-primary">
+                  Страна производства:
+                </span>
+
+                  <span class="tw-text-base tw-font-light tw-text-text-secondary">
+                  Россия
+                </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-start lg:tw-items-center tw-w-full tw-gap-4">
+            <span class="tw-text-2xl tw-font-normal tw-text-text-primary">
+              14 900p
+            </span>
+
+              <div class="tw-flex tw-items-center tw-gap-2">
+                {{#> button text="Добавить в корзину" classes="ui-button_md ui-button_primary" }}{{/button}}
+
+                {{#> button classes="ui-button_square ui-button_outlined" }}
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.3975 5.49622C15.2697 5.08928 15.0142 4.73429 14.669 4.48374C14.3238 4.23319 13.9071 4.10039 13.4806 4.10497H10.75L9.92062 1.51997C9.7902 1.11307 9.53392 0.758105 9.18873 0.506262C8.84354 0.254419 8.42729 0.118713 8 0.118713C7.57271 0.118713 7.15645 0.254419 6.81127 0.506262C6.46608 0.758105 6.2098 1.11307 6.07937 1.51997L5.25 4.10497H2.51937C2.09421 4.10558 1.68012 4.24052 1.33624 4.49054C0.992353 4.74055 0.736274 5.09284 0.604574 5.49709C0.472875 5.90134 0.472292 6.33687 0.602909 6.74147C0.733526 7.14606 0.988661 7.49904 1.33187 7.74997L3.55437 9.37497L2.70937 11.9918C2.57282 12.3977 2.57109 12.8368 2.70444 13.2438C2.8378 13.6507 3.09909 14.0036 3.44937 14.25C3.79366 14.5042 4.21087 14.6404 4.63884 14.6383C5.06682 14.6361 5.48265 14.4958 5.82437 14.2381L8 12.6368L10.1762 14.2362C10.5199 14.489 10.9349 14.6263 11.3615 14.6284C11.7881 14.6305 12.2044 14.4972 12.5505 14.2478C12.8966 13.9984 13.1547 13.6456 13.2877 13.2403C13.4207 12.8349 13.4217 12.3978 13.2906 11.9918L12.4456 9.37497L14.6706 7.74997C15.0178 7.50219 15.2759 7.14922 15.4068 6.74331C15.5377 6.3374 15.5345 5.90013 15.3975 5.49622ZM13.9331 6.7406L11.3431 8.63372C11.2367 8.71133 11.1576 8.82055 11.117 8.94581C11.0763 9.07106 11.0763 9.20595 11.1169 9.33122L12.1012 12.375C12.1511 12.5294 12.1506 12.6955 12.1 12.8497C12.0494 13.0038 11.9513 13.1379 11.8196 13.2327C11.688 13.3275 11.5297 13.3781 11.3675 13.3773C11.2053 13.3765 11.0475 13.3242 10.9169 13.2281L8.37 11.3531C8.26273 11.2743 8.1331 11.2318 8 11.2318C7.8669 11.2318 7.73727 11.2743 7.63 11.3531L5.08312 13.2281C4.95255 13.3255 4.79433 13.3789 4.63141 13.3804C4.46849 13.3818 4.30934 13.3314 4.17702 13.2363C4.0447 13.1413 3.94609 13.0065 3.8955 12.8517C3.8449 12.6968 3.84495 12.5298 3.89562 12.375L4.88312 9.33122C4.9237 9.20595 4.92367 9.07106 4.88304 8.94581C4.84241 8.82055 4.76326 8.71133 4.65687 8.63372L2.06687 6.7406C1.93644 6.64509 1.83952 6.51081 1.78996 6.35694C1.7404 6.20306 1.74074 6.03746 1.79093 5.88378C1.84111 5.73011 1.93858 5.59623 2.0694 5.50125C2.20022 5.40628 2.35771 5.35509 2.51937 5.35497H5.70687C5.8392 5.35497 5.9681 5.31297 6.07503 5.23502C6.18195 5.15707 6.26138 5.0472 6.30187 4.92122L7.27062 1.90185C7.32035 1.74734 7.41782 1.61259 7.549 1.517C7.68018 1.42141 7.83831 1.36991 8.00062 1.36991C8.16294 1.36991 8.32106 1.42141 8.45225 1.517C8.58343 1.61259 8.6809 1.74734 8.73062 1.90185L9.69937 4.92122C9.73986 5.0472 9.81929 5.15707 9.92622 5.23502C10.0331 5.31297 10.1621 5.35497 10.2944 5.35497H13.4819C13.6435 5.35509 13.801 5.40628 13.9318 5.50125C14.0627 5.59623 14.1601 5.73011 14.2103 5.88378C14.2605 6.03746 14.2608 6.20306 14.2113 6.35694C14.1617 6.51081 14.0648 6.64509 13.9344 6.7406H13.9331Z" fill="#919A9D"/>
+                </svg>
+                {{/button}}
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="tw-column-start tw-w-full tw-max-w-[640px] tw-gap-6">
-          <h1 class="tw-text-2xl tw-font-medium tw-text-text-primary">
-            Брюки STRAIGHT из костюмной ткани (коричневый)
-          </h1>
+        <div class="tw-column-start tw-w-auto tw-gap-6 lg:tw-mx-auto">
+          <h2 class="tw-text-2xl fullscreen:tw-text-[32px] tw-font-medium tw-text-text-primary">
+            Похожие товары
+          </h2>
+
+          <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 min-[1440px]:tw-grid-cols-4 min-[1660px]:tw-grid-cols-5 tw-w-full tw-max-w-[1920px] tw-gap-y-12 tw-gap-x-8">
+            {{#each products}}
+              {{> card
+                name=this.name
+                desc=this.desc
+                preview=this.preview
+                price=this.price
+                url=this.url
+              }}
+            {{/each}}
+          </div>
         </div>
       </div>
 

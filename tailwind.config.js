@@ -36,6 +36,12 @@ export default {
           tertiary: '#767676'
         },
         'white/dark': '#F7F7F6'
+      },
+      boxShadow: {
+        default: '0 0 0 2px rgba(107, 119, 123, 0.35), 0 1px 2px 0 rgba(16, 24, 40, 0.05)'
+      },
+      screens: {
+        'fullscreen': '1920px'
       }
     }
   },
