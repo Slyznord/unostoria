@@ -14,16 +14,20 @@ export default defineConfig({
     handlebars({
       context: {
         products: Array.from({ length: 10 }, () => ({
-          name: 'костюм voishe из мерсеризованного хлопка',
+          name: 'Костюм voishe из мерсеризованного хлопка',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ',
           price: '5 600р',
-          preview: '/assets/img/catalogue-default.webp'
+          preview: '/assets/img/catalogue-default.webp',
+          url: '/detail'
         }))
       },
       partialDirectory: [
         resolve(__dirname, 'src/components'),
         resolve(__dirname, 'src/modules'),
-        resolve(__dirname, 'src/sections')
+        resolve(__dirname, 'src/modules/menu'),
+        resolve(__dirname, 'src/sections'),
+        resolve(__dirname, 'src/sections/home'),
+        resolve(__dirname, 'src/icons')
       ]
     })
   ]

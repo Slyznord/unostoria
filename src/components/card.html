@@ -1,23 +1,26 @@
 <div class="tw-column-start tw-w-auto tw-gap-5">
   <img
     src="{{ preview }}"
-    class="tw-w-full tw-h-[420px] min-[1440px]:tw-h-[480px] tw-object-cover tw-object-top tw-rounded-[20px]"
+    class="tw-w-full tw-h-[420px] min-[1440px]:tw-h-[480px] tw-object-cover tw-object-top tw-rounded-sm"
     alt=""
   >
 
   <div class="tw-column-start tw-w-full tw-gap-4">
     <div class="tw-column-start tw-w-full tw-gap-1">
-      <span class="tw-text-lg tw-font-light tw-text-text/default tw-truncate tw-w-full">
+      <a
+        class="tw-text-lg tw-font-light tw-text-text-primary tw-truncate tw-w-full"
+        href="{{ url }}"
+      >
         {{ name }}
-      </span>
+      </a>
 
-      <span class="tw-text-base tw-font-thin tw-text-text/default">
+      <span class="tw-text-base tw-font-thin tw-text-text-primary">
         {{ desc }}
       </span>
     </div>
 
     <div class="tw-flex tw-items-center tw-justify-between tw-w-full">
-      <span class="tw-text-lg tw-font-light tw-text-text/default">
+      <span class="tw-text-lg tw-font-light tw-text-text-primary">
         {{ price }}
       </span>
 
