@@ -3,13 +3,14 @@
     @apply tw-flex tw-items-center tw-justify-center;
     @apply tw-rounded-[5px] tw-cursor-pointer;
     @apply tw-transition-all tw-duration-300;
+    @apply tw-outline-0;
 
     svg path {
       @apply tw-transition-all tw-duration-300;
     }
 
     &_md {
-      @apply tw-w-auto tw-px-3 tw-py-[5px] tw-gap-[10px];
+      @apply tw-w-auto tw-px-3 tw-min-h-[40px] tw-py-[5px] tw-gap-[10px];
     }
 
     &_square {

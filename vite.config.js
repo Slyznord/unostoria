@@ -16,10 +16,15 @@ export default defineConfig({
         products: Array.from({ length: 10 }, () => ({
           name: 'Костюм voishe из мерсеризованного хлопка',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ',
-          price: '5 600р',
+          price: '5 600 ₽',
           preview: '/assets/img/catalogue-default.webp',
           url: '/detail'
-        }))
+        })),
+        sizes: [
+          { text: 'S', value: 'S' },
+          { text: 'M', value: 'M' },
+          { text: 'L', value: 'L' }
+        ]
       },
       partialDirectory: [
         resolve(__dirname, 'src/components'),

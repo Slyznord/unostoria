@@ -1,0 +1,69 @@
+.ui-dropdown {
+  @apply tw-relative;
+
+  &[aria-expanded="true"] {
+    .ui-dropdown-trigger { @apply tw-rotate-180; }
+  }
+
+  &[aria-selected="true"] {
+    .ui-dropdown-reset {
+      @apply tw-flex;
+    }
+
+    [data-placeholder] {
+      @apply tw-font-medium tw-text-primary-100;
+    }
+  }
+
+  &-content {
+    @apply tw-flex tw-items-center tw-justify-between tw-gap-3;
+    @apply tw-px-3 tw-py-[5px] tw-min-h-[40px] tw-rounded-[5px];
+    @apply tw-bg-transparent tw-border tw-border-gray-60;
+    @apply tw-cursor-pointer;
+    @apply tw-transition-all tw-duration-300;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @apply tw-shadow-default tw-border-primary-60;
+    }
+  }
+
+  &-panel {
+    @apply tw-hidden;
+    @apply tw-absolute tw-top-[calc(100%+8px)] tw-left-0;
+    @apply tw-w-full tw-min-w-min tw-h-auto tw-max-h-[250px];
+    @apply tw-bg-white tw-rounded-[5px] tw-border tw-border-gray-60;
+    @apply tw-overflow-y-auto;
+
+    &-active {
+      @apply tw-flex;
+    }
+  }
+
+  &-wrapper {
+    @apply tw-column-start tw-w-full tw-max-h-full;
+    @apply tw-px-1 tw-py-2;
+  }
+
+  &-option {
+    @apply tw-px-3 tw-py-2 tw-w-full tw-rounded-[5px];
+    @apply tw-transition-all tw-duration-300 tw-cursor-pointer;
+
+    &:hover {
+      @apply tw-bg-primary-60 tw-text-white;
+    }
+
+    &[aria-selected="true"] {
+      @apply tw-bg-primary-60 tw-text-white;
+    }
+  }
+
+  &-trigger {
+    @apply tw-transition-all tw-duration-300;
+  }
+
+  &-reset {
+    @apply tw-hidden;
+  }
+}
