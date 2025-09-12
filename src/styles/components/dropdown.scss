@@ -18,7 +18,7 @@
   &-content {
     @apply tw-flex tw-items-center tw-justify-between tw-gap-3;
     @apply tw-px-3 tw-py-[5px] tw-min-h-[40px] tw-rounded-[5px];
-    @apply tw-bg-transparent tw-border tw-border-gray-60;
+    @apply tw-bg-[#EEE];
     @apply tw-cursor-pointer;
     @apply tw-transition-all tw-duration-300;
 
@@ -33,7 +33,7 @@
     @apply tw-hidden;
     @apply tw-absolute tw-top-[calc(100%+8px)] tw-left-0;
     @apply tw-w-full tw-min-w-min tw-h-auto tw-max-h-[250px];
-    @apply tw-bg-white tw-rounded-[5px] tw-border tw-border-gray-60;
+    @apply tw-bg-[#EEE] tw-rounded-[5px];
     @apply tw-overflow-y-auto;
 
     &-active {

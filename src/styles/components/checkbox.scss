@@ -1,0 +1,32 @@
+.ui-checkbox {
+  @apply tw-flex tw-items-center tw-gap-2 tw-cursor-pointer;
+
+  &-input[type="checkbox"] {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:checked + .ui-checkbox-container {
+      @apply tw-bg-primary-60 tw-border-primary-60;
+
+      svg { @apply tw-block; }
+    }
+  }
+
+  &-container {
+    @apply tw-row-centered;
+    @apply tw-w-4 tw-min-w-[16px] tw-h-4;
+    @apply tw-rounded-[5px] tw-border tw-border-gray-100 tw-bg-marble-20;
+    @apply tw-transition-all tw-duration-300;
+
+    svg {
+      display: none;
+    }
+  }
+
+  &:active {
+    .ui-checkbox-container {
+      @apply tw-shadow-default;
+    }
+  }
+}

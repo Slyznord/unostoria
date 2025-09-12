@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="/src/styles/main.scss">
+    <title>Unistoria | Cart</title>
+  </head>
+
+  <body>
+    <div class="tw-column-start tw-w-full tw-min-h-screen">
+      <!-- Компоненты лежат в /src/modules/menu/ -->
+      {{> menu-global }}
+      {{> menu-mobile }}
+
+      <div class="un-container tw-column-center tw-w-full tw-gap-12 tw-pt-[108px] lg:tw-pt-0">
+        <div class="tw-flex tw-items-center tw-justify-center tw-gap-20 md:tw-gap-[200px]">
+          <!-- Пример активного этапа оформления заказа (зеленый фон и белый текст внутри) -->
+          <div class="tw-column-center tw-gap-3">
+            <div class="tw-row-centered tw-w-10 fullscreen:tw-w-11 tw-h-10 fullscreen:tw-h-11 tw-rounded-full tw-bg-primary-80">
+              <span class="tw-text-sm tw-font-light tw-text-white">
+                1
+              </span>
+            </div>
+
+            <span class="tw-text-sm tw-font-light tw-text-text-primary">
+              Корзина
+            </span>
+          </div>
+
+          <!-- Пример неактивног этапа оформления заказа (фон отсутствует, обводка серого цвета) -->
+          <!-- Только у этого элемента есть специфичные классы с after: и :before для отрисовки линий между этапами -->
+          <div class="tw-column-center tw-gap-3 tw-relative after:tw-absolute after:tw-w-[80px] md:after:tw-w-[200px] after:tw-h-px after:tw-bg-gray-100 after:tw-right-full after:tw-top-5 before:tw-absolute before:tw-w-[80px] md:before:tw-w-[200px] before:tw-h-px before:tw-bg-gray-100 before:tw-left-full before:tw-top-5">
+            <div class="tw-row-centered tw-w-10 fullscreen:tw-w-11 tw-h-10 fullscreen:tw-h-11 tw-rounded-full tw-border tw-border-gray-100">
+              <span class="tw-text-sm tw-font-light tw-text-gray-100">
+                2
+              </span>
+            </div>
+
+            <span class="tw-text-sm tw-font-light tw-text-text-primary">
+              Доставка
+            </span>
+          </div>
+
+          <!-- Пример неактивног этапа оформления заказа (фон отсутствует, обводка серого цвета) -->
+          <div class="tw-column-center tw-gap-3">
+            <div class="tw-row-centered tw-w-10 fullscreen:tw-w-11 tw-h-10 fullscreen:tw-h-11 tw-rounded-full tw-border tw-border-gray-100">
+              <span class="tw-text-sm tw-font-light tw-text-gray-100">
+                3
+              </span>
+            </div>
+
+            <span class="tw-text-sm tw-font-light tw-text-text-primary">
+              Оплата
+            </span>
+          </div>
+        </div>
+
+        <div class="tw-flex tw-items-start tw-justify-center tw-w-full tw-gap-12 tw-max-w-[570px]">
+          <!-- Блок с карточками добавленных товаров -->
+          <form
+            class="tw-column-start tw-w-full tw-gap-8"
+            action=""
+          >
+            <div class="tw-column-start tw-w-full tw-gap-4">
+              <div class="tw-column-start tw-w-full tw-gap-1">
+                <span class="tw-text-xs tw-font-normal tw-text-text-tertiary">
+                  ФИО
+                </span>
+
+                <input
+                  class="un-input"
+                  name="fio"
+                  placeholder="Иван Иванов"
+                >
+              </div>
+
+              <div class="tw-column-start tw-w-full tw-gap-1">
+                <span class="tw-text-xs tw-font-normal tw-text-text-tertiary">
+                  Email
+                </span>
+
+                <input
+                  class="un-input"
+                  name="email"
+                  placeholder="user@mail.com"
+                >
+              </div>
+
+              <div class="tw-column-start tw-w-full tw-gap-1">
+                <span class="tw-text-xs tw-font-normal tw-text-text-tertiary">
+                  Телефон
+                </span>
+
+                <input
+                  class="un-input"
+                  name="phone"
+                  placeholder="+7 (000) - 00 - 00 - 000"
+                >
+              </div>
+
+              <div class="tw-column-start tw-w-full tw-gap-1">
+                <span class="tw-text-xs tw-font-normal tw-text-text-tertiary">
+                  Комментарий
+                </span>
+
+                <textarea class="un-input un-input_outlined tw-min-h-[120px]" name="comment" rows="4" cols="1"></textarea>
+              </div>
+            </div>
+
+            <div class="tw-column-start tw-w-full tw-gap-5">
+              <h2 class="tw-text-lg tw-font-normal tw-text-text-primary">
+                Доставка
+              </h2>
+
+              <div class="tw-column-start tw-w-full tw-gap-4">
+                <div class="tw-column-start tw-w-full tw-gap-1">
+                  <span class="tw-text-xs tw-font-normal tw-text-text-tertiary">
+                    Город
+                  </span>
+
+                  <input
+                    class="un-input"
+                    name="city"
+                    placeholder="Санкт-Петербург"
+                  >
+                </div>
+
+                <div class="tw-column-start tw-w-full tw-gap-1">
+                  <span class="tw-text-xs tw-font-normal tw-text-text-tertiary">
+                    Индекс
+                  </span>
+
+                  <input
+                    class="un-input"
+                    name="index"
+                    placeholder="000000"
+                  >
+                </div>
+
+                <div class="tw-column-start tw-w-full tw-gap-1">
+                  <span class="tw-text-xs tw-font-normal tw-text-text-tertiary">
+                    Пункт выдачи
+                  </span>
+
+                  {{> dropdown
+                    id="select-size"
+                    classes="tw-min-w-full"
+                    placeholder="Выберите пункт выдачи"
+                    options=sizes
+                  }}
+                </div>
+              </div>
+            </div>
+
+            {{#> button text="Перейти к оплате" classes="ui-button_md ui-button_primary tw-w-full" }}{{/button}}
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/product-detail.js"></script>
+  </body>
+</html>
