@@ -31,7 +31,7 @@
       }
 
       &:hover {
-        @apply tw-bg-primary-100 tw-border-primary-100;
+        @apply tw-bg-primary-100 tw-border-primary-100 tw-text-white;
 
         svg path {
           &[stroke] { @apply tw-stroke-white; }
@@ -40,7 +40,7 @@
       }
 
       &:active {
-        @apply tw-bg-transparent tw-border-primary-80 tw-shadow-default;
+        @apply tw-bg-transparent tw-border-primary-80 tw-shadow-default tw-text-primary-80;
 
         svg path {
           &[stroke] { @apply tw-stroke-primary-80; }

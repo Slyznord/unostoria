@@ -7,6 +7,10 @@
     &-center {
       @apply tw-flex tw-flex-col tw-items-center;
     }
+
+    &-end {
+      @apply tw-flex tw-flex-col tw-items-end;
+    }
   }
 
   .tw-row {

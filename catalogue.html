@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Unistoria</title>
+
+    <link rel="stylesheet" href="/src/styles/main.scss">
+  </head>
+
+  <body>
+    <div class="tw-column-start tw-w-full tw-min-h-screen">
+      <!-- Компоненты лежат в /src/modules/menu/ -->
+      {{> menu-global }}
+      {{> menu-mobile }}
+
+      <div class="un-container tw-flex tw-flex-col lg:tw-flex-row tw-items-start tw-w-full tw-gap-12 tw-pt-[108px] lg:tw-pt-0">
+        <div class="tw-column-start tw-w-full lg:tw-max-w-[320px] tw-gap-6">
+          <span class="tw-text-lg tw-font-medium tw-text-text-primary">
+            Филтьры
+          </span>
+
+          <div class="tw-column-start tw-w-full tw-gap-4">
+            {{> dropdown
+              id="select-size"
+              classes="tw-min-w-full"
+              contentClasses="tw-w-full"
+              placeholder="Тип"
+              options=sizes
+            }}
+
+            {{> dropdown
+              id="select-size"
+              classes="tw-min-w-full"
+              contentClasses="tw-w-full"
+              placeholder="Размер"
+              options=sizes
+            }}
+
+            {{> dropdown
+              id="select-size"
+              classes="tw-min-w-full"
+              contentClasses="tw-w-full"
+              placeholder="Цвет"
+              options=sizes
+            }}
+
+            <div class="tw-column-start tw-w-full tw-gap-2">
+              <span class="tw-text-sm tw-font-medium tw-text-text-secondary">
+                Цена
+              </span>
+
+              <div class="tw-grid tw-grid-cols-2 tw-w-full tw-gap-2">
+                <input
+                  type="text"
+                  placeholder="Мин"
+                  class="un-input"
+                >
+
+                <input
+                  type="text"
+                  placeholder="Макс"
+                  class="un-input"
+                >
+              </div>
+            </div>
+
+            {{#> button text="Применить" classes="ui-button_md ui-button_primary tw-w-full" }}{{/button}}
+          </div>
+        </div>
+
+        <div class="tw-column-end tw-w-full tw-gap-4">
+          <div class="tw-flex tw-items-center tw-w-auto tw-gap-2 tw-cursor-pointer">
+            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.750105 3.88155C0.867206 3.99796 1.02561 4.0633 1.19073 4.0633C1.35585 4.0633 1.51425 3.99796 1.63135 3.88155L3.8751 1.6128V14.3753C3.8751 14.5411 3.94095 14.7 4.05816 14.8172C4.17537 14.9345 4.33434 15.0003 4.5001 15.0003C4.66586 15.0003 4.82484 14.9345 4.94205 14.8172C5.05926 14.7 5.1251 14.5411 5.1251 14.3753V1.61905L7.38761 3.88155C7.44571 3.94013 7.51483 3.98663 7.59099 4.01836C7.66716 4.05009 7.74885 4.06643 7.83135 4.06643C7.91386 4.06643 7.99555 4.05009 8.07172 4.01836C8.14788 3.98663 8.217 3.94013 8.27511 3.88155C8.39151 3.76445 8.45685 3.60604 8.45685 3.44093C8.45685 3.27581 8.39151 3.1174 8.27511 3.0003L5.83135 0.550303C5.47979 0.199177 5.00323 0.00195312 4.50635 0.00195312C4.00948 0.00195312 3.53292 0.199177 3.18135 0.550303L0.750105 3.0003C0.633698 3.1174 0.568359 3.27581 0.568359 3.44093C0.568359 3.60604 0.633698 3.76445 0.750105 3.88155Z" fill="black"/>
+            </svg>
+
+            <!-- Иконка стрелка вниз для другого состояния сортировки -->
+<!--            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--              <path d="M11.2806 11.1188C11.2225 11.0602 11.1534 11.0137 11.0773 10.9819C11.0011 10.9502 10.9194 10.9339 10.8369 10.9339C10.7544 10.9339 10.6727 10.9502 10.5965 10.9819C10.5204 11.0137 10.4512 11.0602 10.3931 11.1188L8.1244 13.3875V0.625C8.1244 0.45924 8.05855 0.300269 7.94134 0.183058C7.82413 0.065848 7.66516 0 7.4994 0C7.33364 0 7.17467 0.065848 7.05746 0.183058C6.94025 0.300269 6.8744 0.45924 6.8744 0.625V13.3813L4.6119 11.1188C4.55833 11.0455 4.48945 10.9848 4.41005 10.9409C4.33065 10.8969 4.24264 10.8708 4.15213 10.8643C4.06161 10.8578 3.97077 10.8711 3.88592 10.9033C3.80106 10.9354 3.72423 10.9857 3.66075 11.0505C3.59728 11.1154 3.54869 11.1933 3.51836 11.2788C3.48803 11.3643 3.47669 11.4555 3.48513 11.5458C3.49356 11.6362 3.52157 11.7236 3.56721 11.802C3.61285 11.8805 3.67502 11.948 3.7494 12L6.1994 14.45C6.55096 14.8011 7.02752 14.9984 7.5244 14.9984C8.02127 14.9984 8.49783 14.8011 8.8494 14.45L11.2994 12C11.4133 11.8804 11.4753 11.7206 11.4718 11.5555C11.4683 11.3904 11.3996 11.2334 11.2806 11.1188Z" fill="black"/>-->
+<!--            </svg>-->
+
+            <span class="tw-text-sm tw-font-medium tw-text-text-secondary">
+              По возрастанию цены
+            </span>
+          </div>
+
+          <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 min-[1440px]:tw-grid-cols-4 min-[1660px]:tw-grid-cols-5 tw-w-full tw-gap-y-12 tw-gap-x-8">
+            {{#each products}}
+              {{> card
+                name=this.name
+                desc=this.desc
+                preview=this.preview
+                price=this.price
+                url=this.url
+              }}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

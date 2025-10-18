@@ -20,12 +20,22 @@
     </div>
 
     <div class="tw-flex tw-items-center tw-justify-between tw-w-full">
-      <span class="tw-text-lg tw-font-light tw-text-text-primary">
+      <span class="tw-text-base tw-font-light tw-text-text-primary">
         {{ price }}
       </span>
 
-      <!-- ./src/components/button.html -->
-      {{#> button text="В корзину" classes="ui-button_md ui-button_primary" }}{{/button}}
+      <div class="tw-flex tw-gap-2">
+        {{> dropdown
+          id="select-size"
+          classes="ui-dropdown-outlined"
+          contentClasses="!tw-px-2"
+          placeholder="XS"
+          options=sizes
+        }}
+
+        <!-- ./src/components/button.html -->
+        {{#> button text="В корзину" classes="ui-button_md ui-button_outlined" }}{{/button}}
+      </div>
     </div>
   </div>
 </div>

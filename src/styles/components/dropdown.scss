@@ -1,5 +1,5 @@
 .ui-dropdown {
-  @apply tw-relative;
+  @apply tw-flex tw-items-center tw-justify-center tw-relative;
 
   &[aria-expanded="true"] {
     .ui-dropdown-trigger { @apply tw-rotate-180; }
@@ -65,5 +65,13 @@
 
   &-reset {
     @apply tw-hidden;
+  }
+
+  &-outlined {
+    @apply tw-border tw-border-primary-80 tw-text-primary-80 tw-rounded-[5px];
+
+    .ui-dropdown-content {
+      @apply tw-bg-transparent;
+    }
   }
 }
