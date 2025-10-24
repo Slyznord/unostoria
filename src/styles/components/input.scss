@@ -1,4 +1,4 @@
-.un-input {
+.ui-input {
   @apply tw-w-full tw-h-10 tw-px-3 tw-py-2;
   @apply tw-rounded-[5px];
   @apply tw-bg-[#EEE];
@@ -11,6 +11,6 @@
   }
 
   &::placeholder {
-    @apply tw-text-sm fullscreen:tw-text-base tw-font-normal tw-text-text-tertiary;
+    @apply tw-text-base lg:tw-text-sm fullscreen:tw-text-base tw-font-normal tw-text-text-tertiary;
   }
 }

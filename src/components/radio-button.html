@@ -1,0 +1,15 @@
+<label class="ui-radio-button">
+  <input
+    type="radio"
+    class="ui-radio-button-input"
+    name="{{ name }}"
+    value="{{ value }}"
+  >
+
+  <span class="ui-radio-button-circle">
+    <span class="ui-radio-button-circle-inner"></span>
+  </span>
+
+  {{> @partial-block }}
+  {{ text }}
+</label>
